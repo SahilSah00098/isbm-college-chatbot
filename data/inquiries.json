@@ -1,5 +1,17 @@
 [
   {
+    "id": "INQ-9189",
+    "fullName": "Sahil Pankaj Sah",
+    "email": "sah82098@gmail.com",
+    "phone": "+918180098753",
+    "branch": "CSE",
+    "examScore": "N/A",
+    "city": "Pune",
+    "question": "Direct inquiry through chatbot",
+    "status": "Pending",
+    "timestamp": "2026-11-12T07:46:39.189Z"
+  },
+  {
     "id": "INQ-1845",
     "fullName": "Vikramaditya Roy",
     "email": "vikram.roy@outlook.com",

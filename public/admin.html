@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AITE Admin Portal - Admission Inquiries & Analytics</title>
+  <title>ISBM COE Admin Portal - Admission Inquiries & Analytics</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -36,10 +36,10 @@
       </div>
       <div>
         <h1 class="text-lg font-bold text-white flex items-center space-x-2">
-          <span>AITE Admissions Admin Portal</span>
-          <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-400 border border-brand-500/30">Staff Console</span>
+          <span>ISBM College of Engineering</span>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-400 border border-brand-500/30">DTE: 6622</span>
         </h1>
-        <p class="text-xs text-slate-400">Apex Institute of Technology & Engineering, Pune</p>
+        <p class="text-xs text-slate-400">Admissions Admin & Counseling Console • SPPU Affiliated</p>
       </div>
     </div>
     <div class="flex items-center space-x-3">
@@ -66,7 +66,7 @@
           </span>
         </div>
         <p id="metricTotalInquiries" class="text-2xl font-bold text-white">--</p>
-        <p class="text-[11px] text-slate-500 mt-1">Submitted through chatbot lead forms</p>
+        <p class="text-[11px] text-slate-500 mt-1">Submitted through ISBM Bot forms</p>
       </div>
 
       <div class="glass-card bg-slate-900/60 p-5 rounded-2xl border border-white/10">
@@ -88,7 +88,7 @@
           </span>
         </div>
         <p id="metricTotalQueries" class="text-2xl font-bold text-brand-400">--</p>
-        <p class="text-[11px] text-slate-500 mt-1">Questions resolved automatically</p>
+        <p class="text-[11px] text-slate-500 mt-1">Resolved automatically by AI</p>
       </div>
 
       <div class="glass-card bg-slate-900/60 p-5 rounded-2xl border border-white/10">
@@ -98,7 +98,7 @@
             <i class="fa-solid fa-fire"></i>
           </span>
         </div>
-        <p id="metricTopTopic" class="text-2xl font-bold text-purple-400">Admissions</p>
+        <p id="metricTopTopic" class="text-2xl font-bold text-purple-400">Admissions (DTE 6622)</p>
         <p class="text-[11px] text-slate-500 mt-1">Followed by Fees & Placements</p>
       </div>
     </div>
@@ -114,18 +114,17 @@
               <i class="fa-solid fa-address-book text-emerald-400"></i>
               <span>Prospective Student Admission Leads</span>
             </h2>
-            <p class="text-xs text-slate-400">Direct student inquiries received via AeroBot</p>
+            <p class="text-xs text-slate-400">Direct student inquiries received via ISBM Bot</p>
           </div>
           <div class="flex items-center space-x-2">
             <!-- Filter by branch -->
             <select id="branchFilter" onchange="filterInquiries()" class="bg-slate-900 border border-white/10 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 outline-none">
               <option value="ALL">All Branches</option>
-              <option value="CSE">CSE</option>
+              <option value="CSE">Computer Engg</option>
               <option value="AIDS">AI & DS</option>
               <option value="CS_CYBER">Cyber</option>
-              <option value="ECE">ECE</option>
+              <option value="ECE">E&TC</option>
               <option value="ME">Mechanical</option>
-              <option value="CIVIL">Civil</option>
             </select>
             <!-- CSV Export -->
             <button onclick="exportLeadsCSV()" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-semibold text-slate-300 border border-white/10 transition-colors flex items-center space-x-1">
@@ -163,13 +162,13 @@
             <i class="fa-solid fa-bullhorn text-accent-400"></i>
             <span>Publish Campus Notice</span>
           </h2>
-          <p class="text-xs text-slate-400">Post live announcements for students</p>
+          <p class="text-xs text-slate-400">Post live announcements for ISBM COE students</p>
         </div>
 
         <form id="noticeForm" onsubmit="postNotice(event)" class="space-y-3">
           <div>
             <label class="block text-xs font-semibold text-slate-300 mb-1">Notice Title</label>
-            <input type="text" id="noticeTitle" required placeholder="e.g. Round 2 Cutoff List Released" class="w-full bg-slate-900 border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:ring-2 focus:ring-accent-500 outline-none" />
+            <input type="text" id="noticeTitle" required placeholder="e.g. MHT-CET CAP Round 1 Choice Code 6622 Live" class="w-full bg-slate-900 border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:ring-2 focus:ring-accent-500 outline-none" />
           </div>
 
           <div class="grid grid-cols-2 gap-2">

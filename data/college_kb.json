@@ -1,351 +1,300 @@
 {
   "college": {
-    "name": "Apex Institute of Technology & Engineering (AITE)",
-    "shortName": "AITE Pune",
-    "motto": "Excellence in Engineering, Research & Innovation",
-    "established": 2004,
-    "accreditation": "NAAC A++ Grade (CGPA 3.68), NBA Accredited (CSE, AI&DS, ECE, ME), Approved by AICTE, Autonomous Status under State Tech University",
-    "nirfRank": "Ranked 68th among top engineering institutions in India",
-    "campus": "45-Acre Smart Green Eco-Campus with 1 Gbps Wi-Fi, 60+ Hi-Tech Labs, Smart Classrooms, Innovation Incubator",
-    "address": "Apex Knowledge Campus, Sector 12, Tech Zone IV, Innovation Valley, Pune, Maharashtra - 411057",
-    "website": "https://www.apextech.edu.in",
+    "name": "ISBM College of Engineering",
+    "shortName": "ISBM COE Pune",
+    "dteCode": "DTE Code: 6622",
+    "motto": "Transforming Potential into Excellence | Leadership & Innovation",
+    "established": 2010,
+    "accreditation": "Approved by AICTE New Delhi, Recognized by DTE Govt. of Maharashtra (DTE Code: 6622), Affiliated to Savitribai Phule Pune University (SPPU)",
+    "nirfRank": "Ranked among Premier Engineering & Technical Institutions in Pune Region (SPPU Affiliated)",
+    "campus": "Scenic 25-Acre Eco-Friendly Knowledge Campus, Nande-Pashan, Pune with Hi-Tech Laboratories, Smart Classrooms, Wi-Fi enabled Campus & Incubation Cell",
+    "address": "ISBM Knowledge Campus, S. No. 44/1, 44/1/2, Nande Village, Pashan-Sus Road, Pune, Maharashtra - 412115",
+    "website": "https://www.isbmcoe.org",
     "contact": {
-      "admissionHelpline": "+91 98765 43210 / +91 98765 43211",
-      "generalPhone": "020-27654321",
-      "admissionEmail": "admissions@apextech.edu.in",
-      "infoEmail": "info@apextech.edu.in",
-      "tpoEmail": "tpo@apextech.edu.in",
+      "admissionHelpline": "+91 88888 77777 / +91 88888 66666",
+      "generalPhone": "020-66759400 / 020-66759415",
+      "admissionEmail": "admissions@isbmcoe.org",
+      "infoEmail": "info@isbmcoe.org",
+      "tpoEmail": "tpo@isbmcoe.org",
       "antiRagging": "1800-180-5522 (Toll-Free 24x7)",
-      "visitingHours": "9:00 AM to 5:00 PM (Monday to Saturday)"
+      "visitingHours": "9:00 AM to 5:30 PM (Monday to Saturday)"
     }
   },
   "branches": [
     {
       "code": "CSE",
-      "name": "Computer Science & Engineering",
-      "degree": "B.Tech",
+      "name": "Computer Engineering",
+      "degree": "B.E. / B.Tech",
       "duration": "4 Years (8 Semesters)",
-      "intake": 180,
-      "cutoffPercentile": { "general": 94.8, "obc": 91.5, "sc_st": 82.0, "ews": 93.0 },
-      "description": "Comprehensive program covering Software Engineering, Algorithms, Cloud Computing, Distributed Systems, Full-Stack Development and DevOps.",
-      "labs": ["Advanced Computing Lab", "Cloud & Virtualization Lab", "Open Source Software Lab"],
-      "avgPackage": "₹11.2 LPA",
-      "highestPackage": "₹48.5 LPA (Microsoft)"
+      "intake": 120,
+      "cutoffPercentile": { "general": 88.5, "obc": 84.0, "sc_st": 72.0, "ews": 86.5 },
+      "description": "Comprehensive curriculum under SPPU covering Software Engineering, Algorithms, Cloud Computing, Full-Stack Development, Cyber Security & DevOps.",
+      "labs": ["Advanced Computing Lab", "Software Engineering Lab", "Open Source & Network Lab"],
+      "avgPackage": "₹6.8 LPA",
+      "highestPackage": "₹18.5 LPA (Amazon)"
     },
     {
       "code": "AIDS",
-      "name": "Artificial Intelligence & Data Science",
-      "degree": "B.Tech",
+      "name": "Artificial Intelligence & Data Science (AI & DS)",
+      "degree": "B.E. / B.Tech",
       "duration": "4 Years (8 Semesters)",
-      "intake": 120,
-      "cutoffPercentile": { "general": 93.2, "obc": 89.8, "sc_st": 79.5, "ews": 91.5 },
-      "description": "Cutting-edge specialization focused on Machine Learning, Deep Neural Networks, Natural Language Processing, Computer Vision, Big Data Analytics and Generative AI.",
-      "labs": ["NVIDIA GPU AI Lab", "Big Data Analytics Lab", "Cognitive Systems Lab"],
-      "avgPackage": "₹10.8 LPA",
-      "highestPackage": "₹42.0 LPA (Adobe)"
+      "intake": 60,
+      "cutoffPercentile": { "general": 86.2, "obc": 81.5, "sc_st": 68.0, "ews": 84.0 },
+      "description": "Cutting-edge specialization focused on Machine Learning, Deep Neural Networks, Natural Language Processing, Computer Vision, Big Data Analytics & Generative AI.",
+      "labs": ["AI & Machine Learning Lab", "Data Science & Analytics Lab", "Python Systems Lab"],
+      "avgPackage": "₹6.5 LPA",
+      "highestPackage": "₹16.0 LPA (Capgemini)"
     },
     {
       "code": "CS_CYBER",
-      "name": "Computer Science (Cyber Security)",
-      "degree": "B.Tech",
+      "name": "Computer Engineering (Cyber Security)",
+      "degree": "B.E. / B.Tech",
       "duration": "4 Years (8 Semesters)",
       "intake": 60,
-      "cutoffPercentile": { "general": 91.6, "obc": 88.0, "sc_st": 77.0, "ews": 90.0 },
-      "description": "Specialized curriculum covering Ethical Hacking, Network Security, Cryptography, Blockchain, Digital Forensics and Cyber Defense Ops.",
+      "cutoffPercentile": { "general": 84.0, "obc": 79.0, "sc_st": 65.0, "ews": 82.0 },
+      "description": "Specialized curriculum covering Ethical Hacking, Network Security, Cryptography, Blockchain, Digital Forensics & Defense Operations.",
       "labs": ["Cyber Range & Threat Intelligence Lab", "Network Security Lab"],
-      "avgPackage": "₹9.5 LPA",
-      "highestPackage": "₹34.0 LPA (Cisco)"
+      "avgPackage": "₹6.2 LPA",
+      "highestPackage": "₹14.0 LPA (Cisco Systems)"
     },
     {
       "code": "ECE",
-      "name": "Electronics & Communication Engineering",
-      "degree": "B.Tech",
+      "name": "Electronics & Telecommunication Engineering (E&TC)",
+      "degree": "B.E. / B.Tech",
       "duration": "4 Years (8 Semesters)",
-      "intake": 120,
-      "cutoffPercentile": { "general": 87.5, "obc": 83.2, "sc_st": 71.0, "ews": 85.5 },
-      "description": "Focus on Semiconductor Design, VLSI Circuits, Embedded Systems, IoT, 5G Wireless Communications and Robotics hardware.",
-      "labs": ["VLSI Design (Cadence/Synopsys) Lab", "IoT & Embedded Systems Lab", "Antenna & Microwave Lab"],
-      "avgPackage": "₹8.2 LPA",
-      "highestPackage": "₹32.0 LPA (Qualcomm)"
+      "intake": 60,
+      "cutoffPercentile": { "general": 78.5, "obc": 72.0, "sc_st": 58.0, "ews": 76.0 },
+      "description": "Focus on Semiconductor Technologies, VLSI Design, Embedded Systems, IoT, 5G Wireless Communications & Signal Processing.",
+      "labs": ["VLSI & Embedded Systems Lab", "IoT & Microcontroller Lab", "Communication & Microwave Lab"],
+      "avgPackage": "₹5.8 LPA",
+      "highestPackage": "₹12.5 LPA (TCS Digital)"
     },
     {
       "code": "ME",
       "name": "Mechanical Engineering",
-      "degree": "B.Tech",
+      "degree": "B.E. / B.Tech",
       "duration": "4 Years (8 Semesters)",
       "intake": 60,
-      "cutoffPercentile": { "general": 79.0, "obc": 73.5, "sc_st": 61.0, "ews": 77.0 },
-      "description": "Modern engineering including CAD/CAM/CAE, Industry 4.0 Robotics, Thermal & Fluid Systems, EV Powertrain, and Additive 3D Manufacturing.",
+      "cutoffPercentile": { "general": 72.0, "obc": 64.0, "sc_st": 50.0, "ews": 69.0 },
+      "description": "Core engineering including CAD/CAM, Thermal & Fluid Systems, Robotics & Automation, Electric Vehicle Technology & Additive Manufacturing.",
       "labs": ["Robotics & Automation Lab", "Automotive & Formula Student Workshop", "CNC Machining Center"],
-      "avgPackage": "₹6.8 LPA",
-      "highestPackage": "₹18.0 LPA (Tata Motors)"
-    },
-    {
-      "code": "CIVIL",
-      "name": "Civil & Infrastructure Engineering",
-      "degree": "B.Tech",
-      "duration": "4 Years (8 Semesters)",
-      "intake": 60,
-      "cutoffPercentile": { "general": 75.5, "obc": 69.0, "sc_st": 57.0, "ews": 73.0 },
-      "description": "Smart City Planning, Structural Analysis (STAAD Pro/Revit), Geotechnical, Environmental Engineering, BIM and Sustainable Construction.",
-      "labs": ["BIM & Smart Infrastructure Lab", "Concrete & Material Testing Lab", "Geotech & Surveying Lab"],
-      "avgPackage": "₹6.2 LPA",
-      "highestPackage": "₹16.5 LPA (L&T Construction)"
-    },
-    {
-      "code": "EE",
-      "name": "Electrical & EV Engineering",
-      "degree": "B.Tech",
-      "duration": "4 Years (8 Semesters)",
-      "intake": 60,
-      "cutoffPercentile": { "general": 82.0, "obc": 76.5, "sc_st": 64.0, "ews": 80.0 },
-      "description": "Power Systems, Electric Vehicle Battery Systems, Renewable Energy Microgrids, Industrial Automation & Smart Sensors.",
-      "labs": ["EV Technology & Battery Lab", "Power Electronics & Drives Lab", "Renewable Energy Research Lab"],
-      "avgPackage": "₹7.4 LPA",
-      "highestPackage": "₹22.0 LPA (Schneider Electric)"
+      "avgPackage": "₹5.2 LPA",
+      "highestPackage": "₹10.0 LPA (Tata Motors)"
     }
   ],
   "admissions": {
     "session": "Academic Year 2026-2027",
+    "dteCode": "DTE Institute Code: 6622",
     "eligibility": {
-      "firstYear": "Passed 10+2 (HSC) or equivalent with Physics and Mathematics as compulsory subjects along with Chemistry/Biotech/CS/IT with minimum 50% aggregate marks (45% for Reserved Categories of Maharashtra/All India). Valid score in JEE Main (Paper 1) or MHT-CET/State CET is mandatory.",
+      "firstYear": "Passed 10+2 (HSC) or equivalent with Physics and Mathematics as compulsory subjects along with Chemistry/Biotech/CS/IT with minimum 45% aggregate marks (40% for Reserved Categories / PwD of Maharashtra). Valid score in MHT-CET 2026 or JEE Main Paper 1 is mandatory.",
       "directSecondYear": "Passed Diploma in Engineering & Technology with minimum 45% marks (40% for reserved category) OR B.Sc. degree with Mathematics with minimum 45% marks.",
       "mtech": "Valid GATE score + B.E./B.Tech in relevant branch with min 50% (45% reserved)."
     },
     "quotaDistribution": {
-      "stateCapMerit": "65% seats filled through Centralized Admission Process (CAP) of State CET Cell",
+      "stateCapMerit": "65% seats filled through Centralized Admission Process (CAP) of State CET Cell Maharashtra",
       "allIndiaJEE": "20% seats based on All India JEE Main Paper-1 Merit",
-      "institutionalManagement": "15% Institutional / NRI Quota based on merit guidelines"
+      "institutionalManagement": "15% Institutional / Management Quota based on merit guidelines"
     },
     "documentsRequired": [
       "10th (SSC) & 12th (HSC) Original Marksheet & Passing Certificate",
-      "JEE Main / MHT-CET Score Card (2026)",
-      "School / College Leaving / Transfer Certificate (LC/TC)",
-      "Indian Domicile Certificate & Nationality Certificate",
-      "Caste Certificate & Caste Validity Certificate (for Reserved categories)",
-      "Non-Creamy Layer Certificate (valid up to March 31, 2027 for OBC/VJ/NT/SBC)",
-      "Income Certificate issued by Competent Authority (for EBC/TFWS/Scholarships)",
+      "MHT-CET 2026 / JEE Main Score Card",
+      "School / Junior College Leaving / Transfer Certificate (TC/LC)",
+      "Maharashtra State Domicile Certificate & Nationality Certificate",
+      "Caste Certificate, Caste Validity & Non-Creamy Layer (for OBC/VJ/NT/SBC valid up to March 2027)",
+      "Income Certificate issued by Tahsildar (for EBC/TFWS/Govt Scholarships)",
       "Aadhar Card copy and 5 recent passport-size colored photographs",
-      "Gap Certificate (if there is a study gap after 12th)"
+      "Gap Certificate affidavit (if applicable)"
     ],
     "stepsToApply": [
-      "Step 1: Register online on College Portal or State CAP Admission website.",
-      "Step 2: Document Verification at Scrutiny Center (FC / E-Scrutiny).",
+      "Step 1: Register on Maharashtra State CET Cell CAP Admissions portal (mahacet.org).",
+      "Step 2: Complete Document E-Scrutiny or Physical Scrutiny at designated Scrutiny Centers.",
       "Step 3: Check Provisional & Final Merit List ranking.",
-      "Step 4: Fill College Option Form choosing Choice Code for AITE Pune.",
-      "Step 5: On seat allotment in CAP Round 1/2/3, report to AITE Admission Cell with original documents & fee payment."
+      "Step 4: Fill College Option Form putting ISBM College of Engineering (Choice Code: 6622) as top preference.",
+      "Step 5: On seat allotment in CAP Round, report to ISBM COE Admission Cell with original documents & fees."
     ],
     "importantDates": {
-      "registrationStart": "May 20, 2026",
-      "registrationClose": "June 25, 2026",
-      "capRound1": "July 10 - July 18, 2026",
-      "capRound2": "July 22 - July 29, 2026",
-      "capRound3": "August 02 - August 08, 2026",
-      "orientationAndClasses": "August 16, 2026"
+      "registrationStart": "May 25, 2026",
+      "registrationClose": "June 30, 2026",
+      "capRound1": "July 12 - July 20, 2026",
+      "capRound2": "July 25 - August 02, 2026",
+      "capRound3": "August 05 - August 12, 2026",
+      "orientationAndClasses": "August 18, 2026"
     }
   },
   "fees": {
     "annualFeeStructure": {
       "openGeneral": {
-        "tuitionFee": 115000,
-        "developmentFee": 25000,
-        "otherStudentAmenities": 10000,
-        "total": 150000,
-        "description": "Standard approved annual academic fees for Open/General category"
+        "tuitionFee": 85000,
+        "developmentFee": 15000,
+        "otherStudentAmenities": 8000,
+        "total": 108000,
+        "description": "FRA Approved Annual Academic Fees for Open/General category at ISBM COE"
       },
       "ebc_obc_ews": {
-        "tuitionFee": 57500,
-        "developmentFee": 25000,
-        "otherStudentAmenities": 10000,
-        "total": 92500,
-        "description": "50% Tuition fee reimbursed by Govt for eligible OBC / EBC / EWS students"
+        "tuitionFee": 42500,
+        "developmentFee": 15000,
+        "otherStudentAmenities": 8000,
+        "total": 65500,
+        "description": "50% Tuition fee reimbursed by Govt of Maharashtra for eligible OBC / EBC / EWS students"
       },
       "tfws": {
         "tuitionFee": 0,
-        "developmentFee": 25000,
-        "otherStudentAmenities": 10000,
-        "total": 35000,
-        "description": "100% Tuition fee waived under AICTE TFWS Scheme (Income < 8 LPA)"
+        "developmentFee": 15000,
+        "otherStudentAmenities": 8000,
+        "total": 23000,
+        "description": "100% Tuition fee waived under AICTE TFWS Scheme (Family income < 8 LPA)"
       },
       "sc_st": {
         "tuitionFee": 0,
         "developmentFee": 0,
-        "otherStudentAmenities": 5000,
-        "total": 5000,
-        "description": "100% Tuition & Development fee covered under Govt Post-Matric Social Welfare Scholarship"
+        "otherStudentAmenities": 4000,
+        "total": 4000,
+        "description": "100% Tuition & Development fee covered under Govt Social Justice Welfare Scholarship"
       }
     },
     "hostelAndMess": {
       "nonAcThreeSharing": {
-        "hostelRent": 45000,
-        "messFeeAnnual": 32000,
-        "total": 77000,
-        "features": "Furnished room with study table, cupboard, bed, 24x7 hot water, laundry, Wi-Fi & 4 nutritious meals daily"
+        "hostelRent": 40000,
+        "messFeeAnnual": 30000,
+        "total": 70000,
+        "features": "Furnished room with bed, study table, cupboard, 24x7 hot water, high-speed Wi-Fi & 4 hygienic meals daily"
       },
       "acTwoSharing": {
-        "hostelRent": 75000,
-        "messFeeAnnual": 35000,
-        "total": 110000,
-        "features": "Air-conditioned 2-sharing room with attached bathroom, study desks, laundry, gym access & 4 meals daily"
+        "hostelRent": 65000,
+        "messFeeAnnual": 32000,
+        "total": 97000,
+        "features": "Air-conditioned room, attached bathroom, study desks, laundry, gym access & 4 meals daily"
       },
       "cautionDeposit": 10000,
-      "cautionDepositNote": "One-time refundable caution deposit applicable at the time of hostel admission"
+      "cautionDepositNote": "One-time refundable caution deposit applicable at hostel admission"
     },
     "busTransportation": {
-      "cityRoutes": 24000,
-      "pimpriChinchwad": 28000,
-      "extendedRoutes": 32000,
-      "note": "Per academic year, covers pickup and drop across 35 designated bus stops in the city"
+      "cityRoutes": 22000,
+      "pimpriChinchwad": 25000,
+      "extendedRoutes": 28000,
+      "note": "Per academic year, covers pickup and drop across all prime routes in Pune and PCMC"
     }
   },
   "scholarships": [
     {
-      "name": "AITE Chairman's Merit Scholarship",
-      "amount": "50% to 100% Tuition Fee Waiver",
-      "criteria": "Students scoring 98+ percentile in JEE Main or 95%+ in 12th PCM receive 100% waiver. 95-97.9 percentile receive 50% waiver."
+      "name": "ISBM Merit Scholarship",
+      "amount": "25% to 50% Tuition Fee Concession",
+      "criteria": "For meritorious candidates scoring 90+ percentile in MHT-CET/JEE Main or 85%+ in 12th PCM."
     },
     {
-      "name": "Pragati Girl Child Scholarship",
-      "amount": "₹50,000 per annum by AICTE + ₹20,000 College grant",
-      "criteria": "Meritorious female engineering students admitted through CAP with family income < 8 LPA."
+      "name": "AICTE Pragati Scholarship for Girls",
+      "amount": "₹50,000 per year by Govt of India",
+      "criteria": "For female engineering students admitted through CAP with family income < 8 LPA."
+    },
+    {
+      "name": "Rajarshi Chhatrapati Shahu Maharaj Shikshan Shulkh Shishyavrutti (EBC)",
+      "amount": "50% Tuition Fee Reimbursement",
+      "criteria": "For Open/General category economically weaker students with family annual income <= ₹8.00 Lakhs."
     },
     {
       "name": "Govt Post-Matric Social Justice Scholarship",
-      "amount": "100% Tuition + Exam Fee waiver + Maintenance Allowance",
-      "criteria": "For SC/ST candidates through MahaDBT / National Scholarship Portal."
-    },
-    {
-      "name": "Rajarshi Shahu Maharaj Shikshan Shulk Shishyavrutti (EBC)",
-      "amount": "50% Tuition Fee & 50% Exam Fee waiver",
-      "criteria": "For Open/General category economically backward students with family income <= ₹8.00 Lakhs."
-    },
-    {
-      "name": "Sports & Innovation Excellence Award",
-      "amount": "Up to ₹50,000 cash grant & fee concession",
-      "criteria": "National / International level medal winners in sports, Smart India Hackathon winners, patent holders."
+      "amount": "100% Tuition & Exam Fee waiver",
+      "criteria": "For SC/ST/VJNT/SBC/OBC candidates through MahaDBT portal."
     }
   ],
   "placements": {
     "year": "2025-2026 Batch",
     "stats": {
-      "overallPlacementRate": "94.2%",
-      "highestPackage": "₹48.50 LPA (Offered by Microsoft India)",
-      "highestInternational": "₹62.00 LPA (Rakuten, Tokyo, Japan)",
-      "averagePackage": "₹8.85 LPA",
-      "medianPackage": "₹7.40 LPA",
-      "totalOffers": 980,
-      "dreamOffersAbove10LPA": 310,
-      "participatingCompanies": 240
+      "overallPlacementRate": "88.6%",
+      "highestPackage": "₹18.50 LPA (Offered by Amazon)",
+      "averagePackage": "₹6.40 LPA",
+      "medianPackage": "₹5.50 LPA",
+      "totalOffers": 380,
+      "participatingCompanies": 115
     },
     "topRecruiters": [
-      { "name": "Microsoft", "role": "Software Engineer", "package": "₹48.5 LPA" },
-      { "name": "Google", "role": "Software Engineering Intern/FT", "package": "₹44.0 LPA" },
-      { "name": "Amazon", "role": "SDE-1", "package": "₹40.0 LPA" },
-      { "name": "Adobe", "role": "Member of Tech Staff", "package": "₹38.0 LPA" },
-      { "name": "Cisco", "role": "Network Security Engineer", "package": "₹28.5 LPA" },
-      { "name": "NVIDIA", "role": "AI/Deep Learning Engineer", "package": "₹32.0 LPA" },
-      { "name": "Barclays", "role": "Graduate Analyst", "package": "₹14.0 LPA" },
-      { "name": "TCS (Digital/Prime)", "role": "Systems Engineer", "package": "₹7.5 - ₹11.5 LPA" },
-      { "name": "Infosys (Power Programmer)", "role": "Specialist Programmer", "package": "₹9.5 LPA" },
-      { "name": "Deloitte USI", "role": "Cyber & Tech Risk Analyst", "package": "₹8.5 LPA" },
-      { "name": "Tata Motors", "role": "Graduate Engineer Trainee (EV)", "package": "₹9.0 LPA" },
-      { "name": "Larsen & Toubro (L&T)", "role": "Design & Planning Engineer", "package": "₹7.8 LPA" }
+      { "name": "Amazon", "role": "Software Development Engineer", "package": "₹18.5 LPA" },
+      { "name": "Capgemini", "role": "Senior Analyst", "package": "₹16.0 LPA" },
+      { "name": "TCS (Digital / Ninja)", "role": "Systems Engineer", "package": "₹7.5 - ₹11.5 LPA" },
+      { "name": "Infosys", "role": "Specialist Programmer", "package": "₹9.5 LPA" },
+      { "name": "Cognizant", "role": "Programmer Analyst", "package": "₹6.75 LPA" },
+      { "name": "Wipro", "role": "Project Engineer", "package": "₹6.5 LPA" },
+      { "name": "Tech Mahindra", "role": "Associate Software Engineer", "package": "₹5.5 LPA" },
+      { "name": "Tata Motors", "role": "Graduate Engineer Trainee", "package": "₹7.2 LPA" }
     ],
-    "trainingAndPreparation": "Training & Placement Cell (TPC) provides 360-degree training starting from 2nd year: Data Structures & Algorithms (LeetCode/HackerRank bootcamps), Mock Technical Interviews with FAANG alumni, Aptitude training, Soft Skills, and mandatory 6-month industry internships."
+    "trainingAndPreparation": "Training & Placement Cell (TPC) provides rigorous aptitude training, technical bootcamps in Java/Python/Full-Stack, mock HR interviews, soft-skills training, and mandatory industry internships."
   },
   "facilities": [
     {
-      "name": "Central Digital Library",
-      "details": "1,20,000+ volumes, subscriptions to IEEE Xplore, ScienceDirect, Springer, ACM Digital Library, NPTEL video servers, 24x7 air-conditioned reading hall with 600 seating capacity."
+      "name": "Central Library & Digital Resource Center",
+      "details": "Over 45,000 books, national & international journals, DELNET access, IEEE research papers, and spacious quiet reading halls."
     },
     {
-      "name": "Supercomputing & AI Research Center",
-      "details": "High-Performance Computing cluster powered by NVIDIA A100 GPUs for deep learning research, sponsored by DST and industry partners."
+      "name": "Advanced Computing & AI Laboratories",
+      "details": "High-speed computing labs with latest Intel i7 systems, high-bandwidth leased line internet, and specialized data science environments."
     },
     {
       "name": "Hostels (Boys & Girls)",
-      "details": "3 on-campus boys hostels and 2 girls hostels accommodating 1,800 students. Secured with biometric entry, 250+ CCTV cameras, resident wardens, 1 Gbps Wi-Fi, modern gym, and hygienic dining mess."
+      "details": "Dedicated on-campus boys and girls hostels with 24x7 security, biometric attendance, Wi-Fi, laundry, and hygienic dining mess."
     },
     {
-      "name": "Sports & Recreation Complex",
-      "details": "Floodlit cricket/football ground, standard 400m running track, 2 synthetic tennis courts, indoor badminton arena, table tennis, yoga studio, and gymnasium with certified trainers."
+      "name": "Sports & Gymnasium",
+      "details": "Spacious sports grounds for cricket, football, basketball court, badminton arena, and indoor games (chess, table tennis) along with modern gym."
     },
     {
-      "name": "Innovation & Incubation Center (AITE-TBI)",
-      "details": "Govt-recognized Startup Incubator with ₹2 Crore seed fund, patent filing support, 3D printing makerspace, and mentorship for student entrepreneurs."
+      "name": "Cafeteria & Food Court",
+      "details": "Hygienic multi-cuisine cafeteria providing fresh breakfast, snacks, lunch, and beverages."
     },
     {
-      "name": "Health Center & Ambulance",
-      "details": "24x7 medical clinic with full-time doctor and nurse, first aid, routine health checks, pharmacy, and dedicated emergency ambulance stationed on campus."
-    },
-    {
-      "name": "Fleet Transport",
-      "details": "Fleet of 25 GPS-enabled AC buses running across Pune, Pimpri-Chinchwad, and suburban zones with live bus tracking via mobile app."
+      "name": "College Bus Fleet",
+      "details": "Fleet of buses covering all major junctions across Pune, Hinjawadi, Kothrud, Katraj, Hadapsar, and PCMC."
     }
   ],
   "campusLife": {
     "fests": [
       {
-        "name": "Technovanza (National Technical Fest)",
-        "duration": "3 Days in February",
-        "highlights": "24-Hour Hackathon, Robo-Wars, Drone Grand Prix, Coding Sprints, Paper Presentations, ₹6,00,000 in cash prizes."
+        "name": "Orion (Annual National Technical & Cultural Fest)",
+        "duration": "3 Days in February/March",
+        "highlights": "Hackathons, Robo-Races, Project Competitions, Cultural Nights, Fashion Show, DJ Night."
       },
       {
-        "name": "Tarang (Annual Cultural Fest)",
-        "duration": "3 Days in March",
-        "highlights": "Celebrity Bollywood Night, Battle of Bands, Fashion Runway, Street Play, Dance Troupes from 50+ colleges."
-      },
-      {
-        "name": "Spardha (Inter-College Sports Tournament)",
+        "name": "Sports Meet (Parakram)",
         "duration": "1 Week in January",
-        "highlights": "Cricket, Football, Basketball, Volleyball, Athletics, Chess, Badminton."
+        "highlights": "Inter-department cricket league, football, volleyball, athletics and indoor tournaments."
       }
     ],
     "clubs": [
-      { "name": "Google Developer Student Club (GDSC)", "focus": "Web, Cloud, Android, Flutter & AI development" },
-      { "name": "IEEE & ACM Student Chapters", "focus": "Research papers, technical seminars, international conferences" },
-      { "name": "Team Apex Motorsports", "focus": "Design and build Formula Student electric racing car" },
-      { "name": "Team AeroAITE", "focus": "Autonomous UAVs, Quadcopters, and Rocketry competitions" },
-      { "name": "CyberKnights", "focus": "Capture The Flag (CTF) competitions, ethical hacking workshops" },
-      { "name": "Rotaract & NSS Club", "focus": "Community service, blood donation camps, rural teaching drives" },
-      { "name": "Music & Dramatic Society ('Aawaz')", "focus": "Theatre, musical performances, street plays" }
+      { "name": "ISBM Coding & Hackathon Club", "focus": "Competitive programming, Web Development & Hackathons" },
+      { "name": "Team ISBM Motorsports", "focus": "Design and development of Go-Karts and ATV vehicles" },
+      { "name": "Robotics & IoT Club", "focus": "Arduino, Raspberry Pi and automation projects" },
+      { "name": "Cultural & Music Society", "focus": "Music bands, drama, street plays and dance" },
+      { "name": "Rotaract Club ISBM", "focus": "Community service, tree plantation and blood donation drives" }
     ]
   },
   "academicsAndExams": {
-    "system": "Autonomy based Choice Based Credit System (CBCS) under NEP 2020 framework",
-    "evaluation": "Continuous Internal Evaluation (CIE) = 40% (Quizzes, assignments, mid-term test, practical viva) + End Semester Examination (ESE) = 60%",
-    "attendanceRule": "Mandatory minimum 75% attendance in theory lectures and 80% in practical sessions to appear for End Semester Examinations.",
-    "gradingSystem": "10-point scale: O (Outstanding 90-100%), A+ (Excellent 80-89%), A (Very Good 70-79%), B+ (Good 60-69%), B (Above Average 55-59%), C (Average 45-54%), P (Pass 40-44%), F (Fail <40%)",
-    "honorsAndMinors": "Students can earn an Honors degree in their parent branch or a Minor degree in emerging areas like AI, Cyber Security, FinTech, Robotics with 18 additional credits."
+    "system": "Credit Based Semester System (CBSS) affiliated to Savitribai Phule Pune University (SPPU)",
+    "evaluation": "In-Semester Continuous Assessment (30 Marks) + End-Semester Theory Exam conducted by SPPU (70 Marks)",
+    "attendanceRule": "Mandatory minimum 75% attendance in theory lectures and practicals as per SPPU university guidelines."
   },
   "faq": [
     {
-      "q": "What is the fee structure for B.Tech CSE?",
-      "a": "The annual academic fee for B.Tech CSE (Open/General) is ₹1,50,000 per year (Tuition ₹1,15,000 + Dev Fee ₹25,000 + Other ₹10,000). For OBC/EBC it is ₹92,500, for TFWS it is ₹35,000, and for SC/ST it is ₹5,000. Hostel & Mess fee is separate (₹77,000 for Non-AC or ₹1,10,000 for AC)."
+      "q": "What is the DTE Code for ISBM College of Engineering?",
+      "a": "The official DTE Institute Code for ISBM College of Engineering, Pune is 6622. Use Choice Code 6622 during MHT-CET CAP option form filling."
     },
     {
-      "q": "What is the cutoff for CSE and AI & Data Science?",
-      "a": "For the recent academic cycle, CSE closing percentile was 94.8%ile for General, 91.5%ile for OBC, and 82.0%ile for SC/ST. For AI & Data Science, closing percentile was 93.2%ile for General, 89.8%ile for OBC, and 79.5%ile for SC/ST."
+      "q": "What is the fee structure for Computer Engineering at ISBM COE?",
+      "a": "The annual academic fee for Computer Engineering is approximately ₹1,08,000 for Open/General category. For OBC/EBC students with income < 8 LPA, it is ₹65,500. Under AICTE TFWS scheme, tuition fee is 100% free (₹23,000 total). For SC/ST students, it is only ₹4,000. Hostel & mess charges are around ₹70,000/year (3-sharing)."
     },
     {
-      "q": "How are the placements at AITE?",
-      "a": "AITE recorded a 94.2% placement rate for 2025-2026. The highest domestic package is ₹48.5 LPA (Microsoft), highest international package is ₹62 LPA (Rakuten Japan), and the average package across branches is ₹8.85 LPA (CSE/AI average is ₹11 LPA). Over 240+ marquee companies recruit annually."
+      "q": "Which university is ISBM College of Engineering affiliated to?",
+      "a": "ISBM College of Engineering is permanently approved by AICTE, New Delhi, recognized by DTE Govt. of Maharashtra, and affiliated to Savitribai Phule Pune University (SPPU)."
     },
     {
-      "q": "Is hostel facility available for 1st-year students?",
-      "a": "Yes! Guaranteed on-campus hostel accommodation is reserved for 1st-year outstation students (3 boys hostels and 2 girls hostels). Amenities include 24x7 Wi-Fi, hygienic 4-time dining, biometric security, laundry, medical facility, and gym."
+      "q": "What are the cutoff percentiles for Computer Engineering and AI & Data Science?",
+      "a": "For the recent MHT-CET CAP rounds, Computer Engineering closing percentile was approx 88.5%ile (General), 84.0%ile (OBC), and 72.0%ile (SC/ST). For AI & Data Science, it was approx 86.2%ile (General) and 81.5%ile (OBC)."
     },
     {
-      "q": "Can I get direct second year admission after Diploma?",
-      "a": "Yes, Lateral Entry (Direct Second Year B.Tech) is available through State CAP counseling for students holding a 3-year Polytechnic Diploma with at least 45% marks (40% for reserved categories). We have 10% supernumerary seats in all branches."
+      "q": "How are placements at ISBM College of Engineering?",
+      "a": "ISBM COE recorded an 88.6% placement rate with the highest package reaching ₹18.5 LPA (Amazon) and an average package of ₹6.4 LPA. Top recruiters include Amazon, Capgemini, TCS, Infosys, Cognizant, Wipro, and Tata Motors."
     },
     {
-      "q": "Are there scholarships available for girl students?",
-      "a": "Yes, female students can avail the AICTE Pragati Scholarship (₹50,000/year) plus an additional ₹20,000 AITE Women in Tech Merit Grant, along with State Government fee concession schemes."
-    },
-    {
-      "q": "How can I apply for admission?",
-      "a": "You can apply through the Centralized Admission Process (CAP) of the State CET Cell or register on our Admissions Portal. You can also submit an inquiry directly through this chatbot to speak with our admission counselor."
+      "q": "Where is the college located?",
+      "a": "ISBM College of Engineering is located at ISBM Knowledge Campus, S. No. 44/1, 44/1/2, Nande Village, Pashan-Sus Road, Pune - 412115 (close to Hinjawadi IT Park)."
     }
   ]
 }

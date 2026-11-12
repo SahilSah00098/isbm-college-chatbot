@@ -1,5 +1,5 @@
 /**
- * AITE Admin Portal JavaScript Controller
+ * ISBM COE Admin Portal JavaScript Controller
  */
 
 let allInquiries = [];
@@ -133,7 +133,7 @@ function exportLeadsCSV() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `AITE_Admission_Leads_${Date.now()}.csv`;
+  a.download = `ISBM_COE_Admission_Leads_${Date.now()}.csv`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

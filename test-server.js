@@ -1,12 +1,11 @@
 /**
- * Automated Test Suite for AITE Engineering College Chatbot
+ * Automated Test Suite for ISBM College of Engineering Chatbot
  */
 const { server } = require('./server');
 
 async function runTests() {
-  console.log('\n🧪 Starting Chatbot Verification Test Suite...\n');
+  console.log('\n🧪 Starting ISBM COE Chatbot Verification Test Suite...\n');
 
-  // Allow server a brief moment to bind
   await new Promise(r => setTimeout(r, 500));
 
   const BASE_URL = 'http://127.0.0.1:3000';
@@ -28,7 +27,8 @@ async function runTests() {
 
   try {
     // 1. Health
-    await testEndpoint('Health Check', `${BASE_URL}/api/health`);
+    const health = await testEndpoint('Health Check', `${BASE_URL}/api/health`);
+    console.log(`   Institute: ${health.data?.institute} | ${health.data?.dteCode}`);
 
     // 2. College Info
     await testEndpoint('College Info', `${BASE_URL}/api/college-info`);
@@ -41,7 +41,7 @@ async function runTests() {
     const elig = await testEndpoint('Check Eligibility API', `${BASE_URL}/api/check-eligibility`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ pcmPercentage: 82, entrancePercentile: 92.5, category: 'general' })
+      body: JSON.stringify({ pcmPercentage: 78, entrancePercentile: 87.5, category: 'general' })
     });
     console.log(`   Eligibility response: ${elig.data?.eligibleBranches?.length} qualifying branches.`);
 
@@ -56,11 +56,11 @@ async function runTests() {
     // 6. Chat queries test (English, Hinglish, Hindi)
     const queries = [
       "Hello, who are you?",
-      "fees kitni hai CSE ki?",
+      "DTE code kya hai ISBM college ka?",
+      "Computer Engineering fees kitni hai?",
       "what are the cutoffs for AI and Data Science?",
       "placements kaisa hai aur highest package kitna hai?",
-      "hostel facilities aur mess charge batao",
-      "scholarship details"
+      "hostel facilities aur mess charge batao at Nande campus"
     ];
 
     for (const q of queries) {
@@ -78,13 +78,13 @@ async function runTests() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        fullName: 'Vikramaditya Roy',
-        phone: '+91 99887 76655',
-        email: 'vikram.roy@outlook.com',
+        fullName: 'Prathamesh Kulkarni',
+        phone: '+91 98220 12345',
+        email: 'prathamesh.k@gmail.com',
         branch: 'CSE',
-        city: 'Delhi',
-        examScore: '95.2 percentile JEE Main',
-        question: 'Want to confirm hostel AC room booking.'
+        city: 'Pune',
+        examScore: '89.4 percentile MHT-CET',
+        question: 'Interested in Computer Engineering CAP Round Choice Code 6622.'
       })
     });
     console.log(`   Created Lead ID: ${inquiry.data?.inquiryId}`);
@@ -97,7 +97,7 @@ async function runTests() {
     const notices = await testEndpoint('Fetch Notices', `${BASE_URL}/api/notices`);
     console.log(`   Active notices count: ${notices.data?.data?.length}`);
 
-    console.log('\n🎉 ALL 12 VERIFICATION TESTS PASSED SUCCESSFULLY!\n');
+    console.log('\n🎉 ALL 12 VERIFICATION TESTS PASSED SUCCESSFULLY FOR ISBM COE!\n');
   } finally {
     server.close(() => {
       console.log('Server shut down cleanly.');

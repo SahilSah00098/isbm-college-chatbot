@@ -1,14 +1,14 @@
 /**
- * AeroBot - Engineering College Virtual AI Assistant
+ * ISBM Bot - ISBM College of Engineering Virtual AI Assistant
  * Client-side Controller & Interactive UI Logic
  */
 
 // Application State
 const state = {
   history: [],
-  apiKey: localStorage.getItem('aite_gemini_key') || '',
-  model: localStorage.getItem('aite_gemini_model') || 'gemini-1.5-flash',
-  ttsEnabled: localStorage.getItem('aite_tts') === 'true',
+  apiKey: localStorage.getItem('isbm_gemini_key') || '',
+  model: localStorage.getItem('isbm_gemini_model') || 'gemini-1.5-flash',
+  ttsEnabled: localStorage.getItem('isbm_tts') === 'true',
   isListening: false,
   recognition: null
 };
@@ -143,7 +143,7 @@ function renderBotMessage(rawText, chips = [], engine = 'knowledge-engine') {
   const formattedHtml = formatMarkdown(rawText);
   const engineBadge = engine === 'gemini' 
     ? `<span class="inline-flex items-center text-[10px] text-emerald-400 font-semibold mb-1"><i class="fa-solid fa-sparkles mr-1"></i> Gemini 1.5 AI</span>`
-    : `<span class="inline-flex items-center text-[10px] text-brand-300 font-semibold mb-1"><i class="fa-solid fa-building-columns mr-1"></i> AITE Official Portal</span>`;
+    : `<span class="inline-flex items-center text-[10px] text-brand-300 font-semibold mb-1"><i class="fa-solid fa-building-columns mr-1"></i> ISBM COE Official Portal (DTE: 6622)</span>`;
 
   // Chips HTML
   let chipsHtml = '';
@@ -378,7 +378,7 @@ function stopListening() {
 // ==========================================
 function toggleTTS() {
   state.ttsEnabled = !state.ttsEnabled;
-  localStorage.setItem('aite_tts', state.ttsEnabled);
+  localStorage.setItem('isbm_tts', state.ttsEnabled);
   updateTTSButtonUI();
 
   if (!state.ttsEnabled && window.speechSynthesis) {
@@ -608,21 +608,21 @@ function saveApiSettings() {
   state.apiKey = key;
   state.model = model;
 
-  localStorage.setItem('aite_gemini_key', key);
-  localStorage.setItem('aite_gemini_model', model);
+  localStorage.setItem('isbm_gemini_key', key);
+  localStorage.setItem('isbm_gemini_model', model);
 
   updateEngineBadge();
   closeModal('settingsModal');
 
   if (key) {
-    alert('✅ Free Gemini AI API Key saved successfully! AeroBot will now use Google Gemini AI.');
+    alert('✅ Free Gemini AI API Key saved successfully! ISBM Bot will now use Google Gemini AI.');
   } else {
-    alert('ℹ️ Gemini API Key cleared. AeroBot will use the built-in Smart College Knowledge Engine.');
+    alert('ℹ️ Gemini API Key cleared. ISBM Bot will use the built-in Smart College Knowledge Engine.');
   }
 }
 
 function clearApiSettings() {
-  localStorage.removeItem('aite_gemini_key');
+  localStorage.removeItem('isbm_gemini_key');
   document.getElementById('userGeminiKey').value = '';
   state.apiKey = '';
   updateEngineBadge();
@@ -636,13 +636,14 @@ function exportChat() {
   }
 
   let text = `========================================================\n`;
-  text += `APEX INSTITUTE OF TECHNOLOGY & ENGINEERING (AITE PUNE)\n`;
-  text += `AeroBot - Admission & Student AI Chat Transcript\n`;
+  text += `ISBM COLLEGE OF ENGINEERING (ISBM COE PUNE)\n`;
+  text += `DTE Code: 6622 | Affiliated to Savitribai Phule Pune University\n`;
+  text += `ISBM Bot - Admission & Student AI Chat Transcript\n`;
   text += `Exported on: ${new Date().toLocaleString()}\n`;
   text += `========================================================\n\n`;
 
   state.history.forEach((m, idx) => {
-    const roleName = m.role === 'user' ? 'STUDENT' : 'AEROBOT (AI ASSISTANT)';
+    const roleName = m.role === 'user' ? 'STUDENT' : 'ISBM BOT (AI ASSISTANT)';
     text += `[${idx + 1}] ${roleName}:\n${m.content}\n\n`;
   });
 
@@ -650,7 +651,7 @@ function exportChat() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `AITE_College_Chat_${Date.now()}.txt`;
+  a.download = `ISBM_COE_Chat_${Date.now()}.txt`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
