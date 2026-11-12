@@ -1,0 +1,38 @@
+[
+  {
+    "id": "INQ-1845",
+    "fullName": "Vikramaditya Roy",
+    "email": "vikram.roy@outlook.com",
+    "phone": "+91 99887 76655",
+    "branch": "CSE",
+    "examScore": "95.2 percentile JEE Main",
+    "city": "Delhi",
+    "question": "Want to confirm hostel AC room booking.",
+    "status": "Pending",
+    "timestamp": "2026-11-12T07:31:41.845Z"
+  },
+  {
+    "id": "INQ-1001",
+    "fullName": "Aman Sharma",
+    "email": "aman.sharma24@gmail.com",
+    "phone": "+91 98234 56789",
+    "branch": "CSE",
+    "examScore": "96.4 percentile (JEE Main)",
+    "city": "Mumbai",
+    "question": "Interested in B.Tech CSE AI specialization and hostel facilities.",
+    "status": "Contacted",
+    "timestamp": "2026-11-10T10:15:30.000Z"
+  },
+  {
+    "id": "INQ-1002",
+    "fullName": "Pooja Verma",
+    "email": "pooja.v99@yahoo.com",
+    "phone": "+91 97123 45678",
+    "branch": "AIDS",
+    "examScore": "93.1 percentile (MHT-CET)",
+    "city": "Nagpur",
+    "question": "Enquiring about Pragati scholarship eligibility and admission dates.",
+    "status": "Pending",
+    "timestamp": "2026-11-11T14:20:10.000Z"
+  }
+]

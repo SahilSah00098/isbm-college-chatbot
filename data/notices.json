@@ -1,0 +1,34 @@
+[
+  {
+    "id": "NOT-201",
+    "title": "B.Tech Admissions 2026-27 Counseling & Merit List Notification",
+    "category": "Admission",
+    "date": "2026-11-10",
+    "pinned": true,
+    "summary": "Registration for Institutional Round and CAP verification is actively open at Central Counseling Cell, Block A."
+  },
+  {
+    "id": "NOT-202",
+    "title": "Annual National Hackathon 'Technovanza 2026' Registrations Live",
+    "category": "Events",
+    "date": "2026-11-08",
+    "pinned": true,
+    "summary": "Prize pool of ₹6,00,000 across Web3, AI/ML, and Smart Mobility tracks. Register before Dec 05."
+  },
+  {
+    "id": "NOT-203",
+    "title": "Campus Placement Drive: Microsoft & NVIDIA Schedule",
+    "category": "Placements",
+    "date": "2026-11-05",
+    "pinned": false,
+    "summary": "Eligible final-year students must register on Superset portal before Nov 20."
+  },
+  {
+    "id": "NOT-204",
+    "title": "Odd Semester End-Term Examination Schedule Announced",
+    "category": "Academics",
+    "date": "2026-11-01",
+    "pinned": false,
+    "summary": "ESE examinations will commence from December 15. Check student portal for hall tickets."
+  }
+]

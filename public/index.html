@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroBot - Engineering College Virtual AI Assistant | AITE Pune</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            accent: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT TICKER -->
+  <div class="bg-gradient-to-r from-brand-900 via-indigo-900 to-purple-900 border-b border-white/10 px-4 py-2 text-xs md:text-sm text-slate-200 flex items-center justify-between">
+    <div class="flex items-center space-x-2 overflow-hidden whitespace-nowrap">
+      <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-accent-500 text-slate-950 animate-pulse">
+        <i class="fa-solid fa-bullhorn mr-1.5"></i> ADMISSIONS 2026-27
+      </span>
+      <span class="truncate">
+        B.Tech CAP Counseling & Institutional Merit Applications Open! NIRF Top 70 Ranked • NAAC A++ (CGPA 3.68)
+      </span>
+    </div>
+    <div class="hidden md:flex items-center space-x-4 text-xs font-medium shrink-0">
+      <a href="tel:+919876543210" class="hover:text-accent-400 transition-colors flex items-center">
+        <i class="fa-solid fa-phone mr-1 text-accent-400"></i> +91 98765 43210
+      </a>
+      <span class="text-white/20">|</span>
+      <a href="/admin.html" class="text-slate-300 hover:text-white flex items-center">
+        <i class="fa-solid fa-gauge-high mr-1 text-brand-400"></i> Staff Admin
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER / NAVBAR -->
+  <header class="glass-panel border-b border-white/10 sticky top-0 z-30 px-4 md:px-8 py-3.5 flex items-center justify-between">
+    <div class="flex items-center space-x-3.5">
+      <!-- College Emblem -->
+      <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 p-0.5 shadow-lg shadow-brand-500/20 flex items-center justify-center">
+        <div class="w-full h-full bg-slate-900 rounded-[10px] flex items-center justify-center">
+          <i class="fa-solid fa-graduation-cap text-xl text-accent-400"></i>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center space-x-2">
+          <h1 class="text-base md:text-lg font-bold tracking-tight text-white leading-tight">
+            Apex Institute of Technology & Engineering
+          </h1>
+          <span class="hidden lg:inline-flex text-[11px] font-semibold bg-emerald-500/15 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/30">
+            Autonomous
+          </span>
+        </div>
+        <p class="text-xs text-slate-400 flex items-center space-x-2">
+          <span>AITE Pune</span>
+          <span>•</span>
+          <span class="text-accent-400 font-medium">NAAC A++ Grade</span>
+          <span>•</span>
+          <span>AICTE Approved</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Header Actions -->
+    <div class="flex items-center space-x-2 md:space-x-3">
+      <button onclick="openModal('eligibilityModal')" class="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 transition-all">
+        <i class="fa-solid fa-calculator text-brand-400"></i>
+        <span>Check Eligibility</span>
+      </button>
+
+      <button onclick="openModal('feeModal')" class="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 transition-all">
+        <i class="fa-solid fa-coins text-accent-400"></i>
+        <span>Fee Calculator</span>
+      </button>
+
+      <button onclick="openModal('inquiryModal')" class="inline-flex items-center space-x-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white shadow-md shadow-brand-600/30 transition-all">
+        <i class="fa-solid fa-file-signature"></i>
+        <span>Admission Call-back</span>
+      </button>
+
+      <!-- Settings / Free API Key -->
+      <button onclick="openModal('settingsModal')" title="API Settings & Gemini AI Setup" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors">
+        <i class="fa-solid fa-gear"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- QUICK STATS BAR -->
+  <section class="bg-slate-900/60 border-b border-white/5 px-4 md:px-8 py-2">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-4 text-center">
+      <div class="py-1">
+        <p class="text-[11px] text-slate-400">Placement Record</p>
+        <p class="text-sm md:text-base font-bold text-emerald-400">94.2% Placed</p>
+      </div>
+      <div class="py-1">
+        <p class="text-[11px] text-slate-400">Highest Package</p>
+        <p class="text-sm md:text-base font-bold text-accent-400">₹48.5 LPA (Microsoft)</p>
+      </div>
+      <div class="py-1">
+        <p class="text-[11px] text-slate-400">Average Package</p>
+        <p class="text-sm md:text-base font-bold text-brand-400">₹8.85 LPA (CSE ₹11.2)</p>
+      </div>
+      <div class="py-1">
+        <p class="text-[11px] text-slate-400">Campus & Infrastructure</p>
+        <p class="text-sm md:text-base font-bold text-purple-400">45 Acres • 60+ Labs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAT CONTAINER -->
+  <main class="flex-1 max-w-5xl w-full mx-auto p-3 md:p-6 flex flex-col">
+    <!-- Chat Card Box -->
+    <div class="flex-1 glass-panel rounded-2xl border border-white/10 shadow-2xl flex flex-col overflow-hidden relative">
+      
+      <!-- Chat Sub-Header -->
+      <div class="px-4 py-3 bg-slate-900/80 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="relative">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-600 via-indigo-600 to-purple-600 flex items-center justify-center shadow-md">
+              <i class="fa-solid fa-robot text-lg text-white"></i>
+            </div>
+            <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 rounded-full border-2 border-slate-900"></span>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <h2 class="text-sm font-bold text-white">AeroBot</h2>
+              <span id="aiEngineBadge" class="text-[10px] font-medium px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/30 flex items-center space-x-1">
+                <i class="fa-solid fa-bolt text-[9px] mr-1"></i>
+                <span id="aiEngineText">Smart Knowledge Engine (Free)</span>
+              </span>
+            </div>
+            <p class="text-[11px] text-slate-400">Official 24x7 Engineering Admission & Student Assistant</p>
+          </div>
+        </div>
+
+        <!-- Chat Controls -->
+        <div class="flex items-center space-x-1.5 md:space-x-2">
+          <!-- Voice Audio Toggle -->
+          <button id="ttsToggleBtn" onclick="toggleTTS()" title="Toggle voice read-aloud" class="p-2 text-xs rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border border-white/10 transition-colors">
+            <i id="ttsIcon" class="fa-solid fa-volume-high"></i>
+          </button>
+
+          <!-- Export Chat -->
+          <button onclick="exportChat()" title="Download / Export Chat History" class="p-2 text-xs rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border border-white/10 transition-colors">
+            <i class="fa-solid fa-download"></i>
+          </button>
+
+          <!-- Clear Chat -->
+          <button onclick="clearChat()" title="Clear Chat History" class="p-2 text-xs rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-red-400 border border-white/10 transition-colors">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- MESSAGES THREAD (SCROLLABLE) -->
+      <div id="chatMessages" class="flex-1 overflow-y-auto p-4 md:p-6 space-y-4 max-h-[58vh] min-h-[420px]">
+        
+        <!-- Welcome Card -->
+        <div class="bg-gradient-to-br from-slate-900/90 to-brand-950/70 border border-brand-500/20 rounded-2xl p-4 md:p-5 shadow-lg animate-fade-in">
+          <div class="flex items-start space-x-3.5">
+            <div class="w-10 h-10 rounded-xl bg-brand-600/30 text-brand-400 border border-brand-500/40 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-hand-sparkles text-lg"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-base font-bold text-white mb-1">
+                Welcome to Apex Institute of Technology & Engineering! 🎓
+              </h3>
+              <p class="text-xs md:text-sm text-slate-300 leading-relaxed mb-3">
+                Hello! I am <span class="font-semibold text-brand-300">AeroBot</span>, your virtual guide for B.Tech Admissions, Fees, Placements, Cutoffs, and Campus Life. You can ask me questions in <span class="text-accent-400 font-medium">English, Hindi, ya Hinglish</span> me!
+              </p>
+
+              <!-- Quick Action Tool Cards -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-white/10">
+                <button onclick="openModal('eligibilityModal')" class="p-2.5 rounded-xl bg-white/5 hover:bg-brand-600/20 border border-white/10 hover:border-brand-500/40 text-left transition-all group">
+                  <i class="fa-solid fa-graduation-cap text-brand-400 mb-1 group-hover:scale-110 transition-transform"></i>
+                  <p class="text-xs font-semibold text-white">Eligibility</p>
+                  <p class="text-[10px] text-slate-400">Check branch chances</p>
+                </button>
+
+                <button onclick="openModal('feeModal')" class="p-2.5 rounded-xl bg-white/5 hover:bg-accent-500/20 border border-white/10 hover:border-accent-500/40 text-left transition-all group">
+                  <i class="fa-solid fa-calculator text-accent-400 mb-1 group-hover:scale-110 transition-transform"></i>
+                  <p class="text-xs font-semibold text-white">Fee Calculator</p>
+                  <p class="text-[10px] text-slate-400">Estimate 4-year cost</p>
+                </button>
+
+                <button onclick="sendQuickMessage('What are the cutoff percentiles for CSE and AI & Data Science?')" class="p-2.5 rounded-xl bg-white/5 hover:bg-purple-600/20 border border-white/10 hover:border-purple-500/40 text-left transition-all group">
+                  <i class="fa-solid fa-chart-line text-purple-400 mb-1 group-hover:scale-110 transition-transform"></i>
+                  <p class="text-xs font-semibold text-white">Cutoff Stats</p>
+                  <p class="text-[10px] text-slate-400">JEE & CET Ranks</p>
+                </button>
+
+                <button onclick="openModal('inquiryModal')" class="p-2.5 rounded-xl bg-white/5 hover:bg-emerald-600/20 border border-white/10 hover:border-emerald-500/40 text-left transition-all group">
+                  <i class="fa-solid fa-user-check text-emerald-400 mb-1 group-hover:scale-110 transition-transform"></i>
+                  <p class="text-xs font-semibold text-white">Counseling</p>
+                  <p class="text-[10px] text-slate-400">Get callback today</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Initial Bot Message -->
+        <div class="flex items-start space-x-3 animate-fade-in">
+          <div class="w-8 h-8 rounded-full bg-brand-600 flex items-center justify-center shrink-0 text-white text-xs shadow">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="max-w-[85%]">
+            <div class="glass-card bg-slate-900/80 rounded-2xl rounded-tl-sm p-4 text-slate-200 prose-chat border border-white/10 shadow-md">
+              <p>How can I help you today? You can select any trending topic below or type your question directly:</p>
+            </div>
+            <!-- Quick Chips -->
+            <div class="flex flex-wrap gap-1.5 mt-2.5">
+              <button onclick="sendQuickMessage('Admissions 2026 eligibility and process')" class="text-xs px-3 py-1 rounded-full bg-white/5 hover:bg-brand-600 hover:text-white text-slate-300 border border-white/10 transition-all">
+                🎯 Admissions 2026
+              </button>
+              <button onclick="sendQuickMessage('Fee structure for B.Tech and scholarship')" class="text-xs px-3 py-1 rounded-full bg-white/5 hover:bg-brand-600 hover:text-white text-slate-300 border border-white/10 transition-all">
+                💰 Fees & Scholarships
+              </button>
+              <button onclick="sendQuickMessage('Tell me about placements and highest package')" class="text-xs px-3 py-1 rounded-full bg-white/5 hover:bg-brand-600 hover:text-white text-slate-300 border border-white/10 transition-all">
+                🚀 Placements 2025-26
+              </button>
+              <button onclick="sendQuickMessage('What branches and courses are offered?')" class="text-xs px-3 py-1 rounded-full bg-white/5 hover:bg-brand-600 hover:text-white text-slate-300 border border-white/10 transition-all">
+                📚 B.Tech Branches
+              </button>
+              <button onclick="sendQuickMessage('Hostel charges and facilities')" class="text-xs px-3 py-1 rounded-full bg-white/5 hover:bg-brand-600 hover:text-white text-slate-300 border border-white/10 transition-all">
+                🏨 Hostel & Mess
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TYPING INDICATOR (HIDDEN BY DEFAULT) -->
+      <div id="typingIndicator" class="hidden px-6 py-2 flex items-center space-x-2 text-xs text-slate-400">
+        <div class="w-6 h-6 rounded-full bg-brand-600/40 flex items-center justify-center text-brand-300 text-[10px]">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="bg-slate-900/60 px-3 py-1.5 rounded-full border border-white/5 flex items-center space-x-1">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="ml-2 text-slate-400">AeroBot is thinking...</span>
+        </div>
+      </div>
+
+      <!-- BOTTOM INPUT AREA -->
+      <div class="p-3 md:p-4 bg-slate-900/90 border-t border-white/10">
+        <!-- Input Form -->
+        <form id="chatForm" onsubmit="handleChatSubmit(event)" class="relative flex items-center space-x-2">
+          
+          <!-- Voice Recognition Button -->
+          <button type="button" id="voiceBtn" onclick="toggleVoiceRecognition()" title="Speak in Hindi/English" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all flex items-center justify-center shrink-0">
+            <i id="micIcon" class="fa-solid fa-microphone"></i>
+          </button>
+
+          <!-- Text Input -->
+          <div class="relative flex-1">
+            <input 
+              type="text" 
+              id="chatInput" 
+              placeholder="Ask anything about fees, cutoffs, placements, admissions (Hindi / English)..." 
+              autocomplete="off"
+              class="w-full bg-slate-950/70 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all pr-10"
+            />
+          </div>
+
+          <!-- Send Button -->
+          <button 
+            type="submit" 
+            id="sendBtn"
+            class="px-4 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-medium shadow-md shadow-brand-600/30 transition-all flex items-center space-x-2 shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <span>Send</span>
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+          </button>
+        </form>
+
+        <!-- Quick Hint -->
+        <div class="flex items-center justify-between text-[11px] text-slate-500 mt-2 px-1">
+          <span class="flex items-center">
+            <i class="fa-solid fa-lightbulb text-amber-400/80 mr-1.5"></i>
+            Tip: Ask naturally like <i>"CSE fees kitni hai?"</i> or <i>"Hostel kaisa hai?"</i>
+          </span>
+          <span class="hidden sm:inline">Press Enter to send</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============================================================= -->
+  <!-- MODALS SECTION -->
+  <!-- ============================================================= -->
+
+  <!-- MODAL 1: ELIGIBILITY CHECKER -->
+  <div id="eligibilityModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-white/10 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative animate-fade-in max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal('eligibilityModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex items-center space-x-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-brand-600/20 text-brand-400 flex items-center justify-center">
+          <i class="fa-solid fa-calculator text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-white">Branch Eligibility Checker</h3>
+          <p class="text-xs text-slate-400">Calculate your qualification chances based on recent cutoff ranks</p>
+        </div>
+      </div>
+
+      <form id="eligibilityForm" onsubmit="checkEligibility(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">12th PCM Aggregate Percentage (%)</label>
+          <input type="number" step="0.1" min="0" max="100" id="pcmScore" required placeholder="e.g. 78.5" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-brand-500 outline-none" />
+          <p class="text-[11px] text-slate-500 mt-1">Minimum 50% for General, 45% for Reserved Categories.</p>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Entrance Percentile (JEE Main or MHT-CET)</label>
+          <input type="number" step="0.01" min="0" max="100" id="entrancePercentile" required placeholder="e.g. 92.4" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-brand-500 outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Admission Category</label>
+          <select id="applicantCategory" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-brand-500 outline-none">
+            <option value="general">General / Open</option>
+            <option value="obc">OBC / VJ / NT</option>
+            <option value="sc_st">SC / ST</option>
+            <option value="ews">EWS (Economically Weaker Section)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 font-semibold text-xs text-white transition-colors">
+          Evaluate My Chances
+        </button>
+      </form>
+
+      <!-- Results Container -->
+      <div id="eligibilityResults" class="mt-4 hidden border-t border-white/10 pt-4"></div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: FEE CALCULATOR -->
+  <div id="feeModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-white/10 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative animate-fade-in max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal('feeModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex items-center space-x-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-accent-500/20 text-accent-400 flex items-center justify-center">
+          <i class="fa-solid fa-coins text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-white">Smart Fee Calculator</h3>
+          <p class="text-xs text-slate-400">Estimate your 1st-Year & Total 4-Year B.Tech Investment</p>
+        </div>
+      </div>
+
+      <form id="feeCalcForm" onsubmit="calculateFees(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Student Category / Quota</label>
+          <select id="feeCategory" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-accent-500 outline-none">
+            <option value="openGeneral">Open / General (₹1,50,000/yr)</option>
+            <option value="ebc_obc_ews">OBC / EBC / EWS (50% Fee Concession - ₹92,500/yr)</option>
+            <option value="tfws">AICTE TFWS Scheme (100% Tuition Waiver - ₹35,000/yr)</option>
+            <option value="sc_st">SC / ST Govt Scholarship (₹5,000/yr)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Hostel & Mess Requirement</label>
+          <select id="feeHostel" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-accent-500 outline-none">
+            <option value="none">Day Scholar (No Hostel)</option>
+            <option value="nonAc">3-Sharing Non-AC + 4 Meals Mess (₹77,000/yr)</option>
+            <option value="ac">2-Sharing AC Room + 4 Meals Mess (₹1,10,000/yr)</option>
+          </select>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <input type="checkbox" id="feeBus" class="rounded bg-slate-950 border-white/20 text-brand-600 focus:ring-0 w-4 h-4" />
+          <label for="feeBus" class="text-xs text-slate-300">Include College AC Bus Transportation (+₹24,000/yr)</label>
+        </div>
+
+        <button type="submit" class="w-full py-2.5 rounded-lg bg-accent-500 hover:bg-accent-600 font-semibold text-xs text-slate-950 transition-colors">
+          Calculate Fee Breakdown
+        </button>
+      </form>
+
+      <!-- Fee Results -->
+      <div id="feeResults" class="mt-4 hidden border-t border-white/10 pt-4"></div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: ADMISSION CALL-BACK / INQUIRY FORM -->
+  <div id="inquiryModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-white/10 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative animate-fade-in max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal('inquiryModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex items-center space-x-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+          <i class="fa-solid fa-file-signature text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-white">Admission Call-Back Request</h3>
+          <p class="text-xs text-slate-400">Speak directly with an AITE Senior Faculty & Admission Counselor</p>
+        </div>
+      </div>
+
+      <form id="leadInquiryForm" onsubmit="submitInquiry(event)" class="space-y-3">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name *</label>
+          <input type="text" id="inqName" required placeholder="e.g. Rahul Sharma" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-emerald-500 outline-none" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">WhatsApp / Phone Number *</label>
+            <input type="tel" id="inqPhone" required placeholder="+91 98765 43210" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-emerald-500 outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
+            <input type="email" id="inqEmail" placeholder="student@gmail.com" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-emerald-500 outline-none" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Preferred B.Tech Branch</label>
+            <select id="inqBranch" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-emerald-500 outline-none">
+              <option value="CSE">Computer Science & Engg (CSE)</option>
+              <option value="AIDS">AI & Data Science (AI & DS)</option>
+              <option value="CS_CYBER">Cyber Security</option>
+              <option value="ECE">Electronics & Telecom (ECE)</option>
+              <option value="ME">Mechanical Engineering</option>
+              <option value="CIVIL">Civil Engineering</option>
+              <option value="EE">Electrical & EV Engineering</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">City / Hometown</label>
+            <input type="text" id="inqCity" placeholder="e.g. Pune, Mumbai, Delhi" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-emerald-500 outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">JEE / CET Percentile or 12th %</label>
+          <input type="text" id="inqScore" placeholder="e.g. 92.4%ile in JEE Main" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-emerald-500 outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Any specific question or query?</label>
+          <textarea id="inqQuestion" rows="2" placeholder="e.g. Looking for hostel availability and management quota details" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-emerald-500 outline-none"></textarea>
+        </div>
+
+        <button type="submit" id="submitLeadBtn" class="w-full py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 font-semibold text-xs text-white transition-colors flex items-center justify-center space-x-2">
+          <span>Submit Call-Back Request</span>
+          <i class="fa-solid fa-paper-plane text-xs"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 4: FREE GEMINI API & SETTINGS -->
+  <div id="settingsModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-white/10 rounded-2xl max-w-md w-full p-6 shadow-2xl relative animate-fade-in">
+      <button onclick="closeModal('settingsModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex items-center space-x-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center">
+          <i class="fa-solid fa-sliders text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-white">AI Engine & API Settings</h3>
+          <p class="text-xs text-slate-400">Configure Free Google Gemini API or Smart Fallback</p>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-slate-950 p-3.5 rounded-xl border border-white/5">
+          <p class="text-xs font-semibold text-slate-200 mb-1 flex items-center">
+            <i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i>
+            Dual AI Engine Architecture
+          </p>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            1. <b>Zero Setup Mode:</b> Works instantly 100% offline using our built-in college knowledge base.<br>
+            2. <b>Free Gemini AI Mode:</b> Connects to Google's official free tier for natural open-ended chat in Hindi/English!
+          </p>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">
+            Google Gemini API Key (Optional & 100% Free)
+          </label>
+          <input 
+            type="password" 
+            id="userGeminiKey" 
+            placeholder="AIzaSy..." 
+            class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-purple-500 outline-none font-mono" 
+          />
+          <div class="flex items-center justify-between mt-1 text-[11px]">
+            <span class="text-slate-500">Stored locally in your browser</span>
+            <a href="https://aistudio.google.com/app/apikey" target="_blank" class="text-accent-400 hover:underline flex items-center">
+              <span>Get Free Key (0 Cost)</span>
+              <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Gemini Model</label>
+          <select id="geminiModel" class="w-full bg-slate-950 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-purple-500 outline-none">
+            <option value="gemini-1.5-flash">Gemini 1.5 Flash (Ultra Fast & Free)</option>
+            <option value="gemini-2.0-flash">Gemini 2.0 Flash (Next-Gen Free Tier)</option>
+            <option value="gemini-1.5-pro">Gemini 1.5 Pro (Deep Reasoning)</option>
+          </select>
+        </div>
+
+        <div class="flex items-center space-x-2 pt-2">
+          <button onclick="saveApiSettings()" class="flex-1 py-2.5 rounded-lg bg-purple-600 hover:bg-purple-500 font-semibold text-xs text-white transition-colors">
+            Save Settings
+          </button>
+          <button onclick="clearApiSettings()" class="px-3 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs text-slate-400 hover:text-red-400 transition-colors">
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="glass-panel border-t border-white/10 py-3 px-4 text-center text-xs text-slate-500">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p>© 2026 Apex Institute of Technology & Engineering (AITE Pune). Autonomous Institution.</p>
+      <div class="flex items-center space-x-4 text-slate-400">
+        <a href="/admin.html" class="hover:text-white transition-colors">Admin Portal</a>
+        <span>•</span>
+        <a href="javascript:void(0)" onclick="sendQuickMessage('What is the contact number and campus address?')" class="hover:text-white transition-colors">Campus Map & Contacts</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
