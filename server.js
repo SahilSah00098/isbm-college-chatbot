@@ -649,15 +649,21 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Start Server
-const server = app.listen(PORT, () => {
-  console.log(`=======================================================`);
-  console.log(`🎓 ISBM College of Engineering Chatbot Server is RUNNING!`);
-  console.log(`🏛️ DTE Institute Code: 6622 | Affiliated to SPPU Pune`);
-  console.log(`🌐 Local URL: http://localhost:${PORT}`);
-  console.log(`📊 Admin Panel: http://localhost:${PORT}/admin.html`);
-  console.log(`🤖 Free AI Mode: ${process.env.GEMINI_API_KEY ? 'Google Gemini API Active' : 'Smart Offline Knowledge Engine (Free)'}`);
-  console.log(`=======================================================`);
-});
+// Start Server - Local and Vercel compatible
 
-module.exports = { app, server };
+let server = null;
+
+if (!process.env.VERCEL) {
+  server = app.listen(PORT, () => {
+    console.log(`=======================================================`);
+    console.log(`ISBM College of Engineering Chatbot Server is RUNNING!`);
+    console.log(`DTE Institute Code: 6622 | Affiliated to SPPU Pune`);
+    console.log(`Local URL: http://localhost:${PORT}`);
+    console.log(`Admin Panel: http://localhost:${PORT}/admin.html`);
+    console.log(`=======================================================`);
+  });
+}
+
+module.exports = app;
+module.exports.app = app;
+module.exports.server = server;
